@@ -1,5 +1,5 @@
 import { StorageBrowser } from '../components/StorageBrowser';
 
-export default function Example() {
+export default function StoragePage() {
   return <StorageBrowser />;
 }

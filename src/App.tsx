@@ -2,23 +2,32 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StoragePage from "./pages/storage";
+import ApiPage from "./pages/api";
+import DataPage from "./pages/data";
+import HomePage from "./pages/home";
+
 export default function App() {
   return (
     <Authenticator>
       {({ signOut, user }) => (
         <main>
-          <h1>Hello {user?.signInDetails?.loginId}</h1>
-          <button onClick={signOut}>Sign out</button>
-          <BrowserRouter>
-          <Routes>
-            <Route path="/" element={
-              <a href="/storage">Go to Storage Page</a>
-            } />
-            <Route path="/storage" element={<StoragePage />} />
-          </Routes>
-          </BrowserRouter>
-        </main>
-      )}
-    </Authenticator>
+          <div>
+            <h1>Hello {user?.signInDetails?.loginId}</h1>
+            <button><a href="/" style={{ color: "white" }}>Go to Home</a></button>
+          </div>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/storage" element={<StoragePage />} />
+                <Route path="/api" element={<ApiPage />} />
+                <Route path="/data" element={<DataPage />} />
+              </Routes>
+            </BrowserRouter>
+            <div>
+              <button onClick={signOut}>Sign out</button>
+            </div>
+          </main>
+        )}
+      </Authenticator>
   );
 }
