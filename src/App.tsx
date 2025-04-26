@@ -3,7 +3,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import StoragePage from "./pages/storage";
 import ApiPage from "./pages/api";
-import DataPage from "./pages/data";
+// import DataPage from "./pages/data";
 import HomePage from "./pages/home";
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/storage" element={<StoragePage />} />
                 <Route path="/api" element={<ApiPage />} />
-                <Route path="/data" element={<DataPage />} />
+                {/* <Route path="/data" element={<DataPage />} /> */}
               </Routes>
             </BrowserRouter>
             <div>
