@@ -5,8 +5,16 @@ import StoragePage from "./pages/storage";
 import ApiPage from "./pages/api";
 // import DataPage from "./pages/data";
 import HomePage from "./pages/home";
+import { Amplify } from "aws-amplify";
+import outputs from "../amplify_outputs.json";
+import awsconfig from "../aws-config.ts";
+
 
 export default function App() {
+  Amplify.configure({
+    // ...awsconfig,
+    ...outputs
+  });
   return (
     <Authenticator>
       {({ signOut, user }) => (
