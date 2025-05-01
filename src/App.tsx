@@ -9,8 +9,6 @@ import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
 import awsconfig from "../aws-config.ts";
 
-
-
 export default function App() {
   Amplify.configure({
     // ...awsconfig,
