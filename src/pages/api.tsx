@@ -10,7 +10,7 @@ async function callApiWithIdToken() {
     }
 
     const response = await fetch(
-      `https://${import.meta.env.VITE_APIGW_ID}.execute-api.${import.meta.env.VITE_REGION}.amazonaws.com/`, 
+      `https://${import.meta.env.VITE_APIGW_ID}.execute-api.${import.meta.env.VITE_REGION}.amazonaws.com/test`, 
       {
         method: "GET",
         headers: {
