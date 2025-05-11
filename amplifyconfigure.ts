@@ -1,9 +1,9 @@
 const config = {
   "auth": {
-    "user_pool_id": import.meta.env.VITE_APP_USER_POOL_ID,
-    "aws_region": import.meta.env.VITE_APP_REGION,
-    "user_pool_client_id": import.meta.env.VITE_APP_WEB_CLIENT_ID,
-    "identity_pool_id": import.meta.env.VITE_APP_IDENTITY_POOL_ID,
+    "user_pool_id": import.meta.env.VITE_USER_POOL_ID,
+    "aws_region": import.meta.env.VITE_REGION,
+    "user_pool_client_id": import.meta.env.VITE_WEB_CLIENT_ID,
+    "identity_pool_id": import.meta.env.VITE_IDENTITY_POOL_ID,
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -25,13 +25,13 @@ const config = {
     },
   },
   "storage": {
-    "aws_region": import.meta.env.VITE_APP_REGION,
-    "bucket_name": import.meta.env.VITE_APP_S3_BUCKET_NAME,
+    "aws_region": import.meta.env.VITE_REGION,
+    "bucket_name": import.meta.env.VITE_S3_BUCKET_NAME,
     "buckets": [
       {
-        "name": import.meta.env.VITE_APP_S3_BUCKET_NAME,
-        "bucket_name": import.meta.env.VITE_APP_S3_BUCKET_NAME,
-        "aws_region": import.meta.env.VITE_APP_REGION,
+        "name": import.meta.env.VITE_S3_BUCKET_NAME,
+        "bucket_name": import.meta.env.VITE_S3_BUCKET_NAME,
+        "aws_region": import.meta.env.VITE_REGION,
         "paths": {
           "logs/*": {
             "authenticated": [
