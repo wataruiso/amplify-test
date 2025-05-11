@@ -1,11 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
   return (
     <>
     <nav>
       <ul>
-      <li><a href="/api">api</a></li>
-      <li><a href="/data">data</a></li>
-      <li><a href="/storage">Storage</a></li>
+      <li>
+        <Link to="/api">API</Link>
+      </li>
+      <li>
+        <Link to="/storage">Storage</Link>
+      </li>
+      <li>
+        <Link to="/data">Data</Link>
+      </li>
       </ul>
     </nav>
     </>
